@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Randomizer
+comment0.text=\r\n\ Creates\ a\ random\ number\r\n\ \r\n\ @author\ Joseph\ Truelove\ \r\n\ @version\ 12.3.2018\r\n
+comment1.params=
+comment1.target=Randomizer()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Randomizer\r\n
+comment2.params=y
+comment2.target=int\ nextInt(int)
+comment2.text=\r\n\ Method\ to\ return\ a\ randome\ value\ from\ 0-y\r\n\ \r\n
+numComments=3
