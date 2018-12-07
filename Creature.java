@@ -10,6 +10,8 @@ public abstract class Creature
    private int hp;
    private int strength;
    private int max_hp;
+   private boolean alive;
+   private boolean dead;
    
    public Creature()
    {

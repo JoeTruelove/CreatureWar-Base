@@ -2,8 +2,8 @@
 /**
  * Write a description of class Demon here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Joseph Truelove 
+ * @version 12.3.2018
  */
 public class Demon extends Creature
 {
