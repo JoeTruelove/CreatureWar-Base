@@ -1,6 +1,7 @@
 
 /**
- * Write a description of class Demon here.
+ * Extends from the Creature class but has a similar task to set a base for
+ * the Demon creatures.
  * 
  * @author Joseph Truelove 
  * @version 12.3.2018

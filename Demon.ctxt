@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Demon
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Demon\ here.\r\n\ \r\n\ @author\ Joseph\ Truelove\ \r\n\ @version\ 12.3.2018\r\n
+comment0.text=\r\n\ Extends\ from\ the\ Creature\ class\ but\ has\ a\ similar\ task\ to\ set\ a\ base\ for\r\n\ the\ Demon\ creatures.\r\n\ \r\n\ @author\ Joseph\ Truelove\ \r\n\ @version\ 12.3.2018\r\n
 comment1.params=
 comment1.target=Demon()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Demon\r\n

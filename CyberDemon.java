@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class CyberDemon here.
+ * Uses the base Demon 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Joseph Truelove
+ * @version 12.7.2018
  */
 public class CyberDemon extends Demon
 {

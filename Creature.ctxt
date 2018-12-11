@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Creature
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Creature\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ The\ base\ of\ all\ creatures,\ setting\ their\ hp,\ strength,\ and\ whether\ they\r\n\ are\ living\ or\ not.\r\n\ \r\n\ @author\ Joseph\ Truelove\r\n\ @version\ 12.7.2018\r\n
 comment1.params=
 comment1.target=Creature()
 comment2.params=hp\ strength

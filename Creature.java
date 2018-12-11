@@ -1,9 +1,10 @@
 
 /**
- * Write a description of class Creature here.
+ * The base of all creatures, setting their hp, strength, and whether they
+ * are living or not.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Joseph Truelove
+ * @version 12.7.2018
  */
 public abstract class Creature
 {

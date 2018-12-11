@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.target=War
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ War\ here.\r\n\r\n\ @author\ Joseph\ Truelove\r\n\ @version\ 12.7.2018\r\n
+comment0.text=\r\n\ Creates\ two\ armies\ that\ will\ generate\ a\ random\ number\ of\ different\ creatures\r\n\ that\ will\ fight\ each\ other\ untill\ the\ first\ army\ or\ both\ armies\ are\ dead\r\n\r\n\ @author\ Joseph\ Truelove\r\n\ @version\ 12.7.2018\r\n
 comment1.params=
 comment1.target=War()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ War\r\n
 comment2.params=
 comment2.target=void\ fight()
-comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
+comment2.text=\r\nThe\ armyLight\ fight\ the\ armyDark\ in\ this\ method\r\n
 numComments=3

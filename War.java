@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 /**
- * Write a description of class War here.
+ * Creates two armies that will generate a random number of different creatures
+ * that will fight each other untill the first army or both armies are dead
  *
  * @author Joseph Truelove
  * @version 12.7.2018
@@ -10,9 +11,10 @@ public class War
     // instance variables - replace the example below with your own
     private int i;
     private int tick;
-    private int size = 10;
-    Creature[] armyLight = new Creature[size];
-    Creature[] armyDark = new Creature[10];
+    private int sizeL = Randomizer.nextInt(75)+25;
+    private int sizeD = Randomizer.nextInt(75)+25;
+    Creature[] armyLight = new Creature[sizeL];
+    Creature[] armyDark = new Creature[sizeD];
     private int light = 0;
     private int dark = 0;
     Creature soldierLight;
@@ -24,7 +26,7 @@ public class War
      */
     public War()
     {
-        for (i = 0; i < size; i++)
+        for (i = 0; i < sizeL; i++)
         {
             tick = Randomizer.nextInt(24)+1;
             if (tick >= 1 && tick <= 5)
@@ -53,7 +55,7 @@ public class War
             }
         }
         
-        for (i = 0; i < size; i++)
+        for (i = 0; i < sizeD; i++)
         {
             tick = Randomizer.nextInt(24)+1;
             if (tick >= 1 && tick <= 5)
@@ -84,23 +86,21 @@ public class War
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     *The armyLight fight the armyDark in this method
      */
     public void fight()
     {
-        while (light < size && dark < size)
+        while (light < sizeL && dark < sizeD)
         {
             soldierLight = armyLight[light];
             soldierDark = armyDark[dark];
             
             while (soldierLight.isAlive() && soldierDark.isAlive())
             {
+                //soldierLight is second to attack
                 soldierLight.takeDamage(soldierDark.damage());
                 
-                if (soldierLight.isDead())
+                if (soldierLight.isDead()) //check if light is dead
                 {
                     light++;
                     break;
@@ -108,7 +108,7 @@ public class War
                 
                 soldierDark.takeDamage(soldierLight.damage());
                 
-                if (soldierDark.isDead())
+                if (soldierDark.isDead()) // check if dark is dead
                 {
                     dark++;
                     break;
@@ -116,15 +116,16 @@ public class War
             }
         }
         
-        if (light == size & dark != size)
+        //Display of victor
+        if (light == sizeL & dark != sizeD)
         {
             System.out.println("Army of Light has won!");
         }
-        else if (dark == size && light != size)
+        else if (dark == sizeL && light != sizeD)
         {
             System.out.println("Army of Dark has won!");
         }
-        else if (light == size && dark == size)
+        else if (light == sizeL && dark == sizeD)
         {
             System.out.println("Both Armies were wiped out");
         }
