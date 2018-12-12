@@ -1,9 +1,10 @@
 #BlueJ class context
 comment0.target=Human
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Human\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ This\ class\ extends\ from\ creature\ and\ is\ the\ blueprint\ of\ a\ Human\r\n\ \r\n\ @author\ Joseph\ Truelove\r\n\ @version\ 12.11.2018\r\n
 comment1.params=
 comment1.target=Human()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Human\r\n
 comment2.params=
 comment2.target=java.lang.String\ toString()
+comment2.text=\r\n\ name\ of\ Creature\r\n
 numComments=3

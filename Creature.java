@@ -14,18 +14,28 @@ public abstract class Creature
    private boolean alive;
    private boolean dead;
    
+   /**
+    * Constructor
+    */
    public Creature()
    {
        strength = 10;
        hp = 10;
        max_hp = hp;
    }
+   
+   /**
+    * Method to return stats
+    */
    public Creature(int hp, int strength)
    {
        this.hp = hp;
        this.strength = strength;
    }
    
+   /**
+    * return whether alive or not
+    */
    public boolean isAlive()
    {
        boolean alive;
@@ -40,6 +50,9 @@ public abstract class Creature
        return alive;
    }
    
+   /**
+    * return whether dead or not
+    */
    public boolean isDead()
    {
       boolean dead;
@@ -53,12 +66,18 @@ public abstract class Creature
       }
       return dead;
     }
-    
+   
+   /**
+    * personal damage
+    */
    public int damage()
    {
        return Randomizer.nextInt(strength) + 1;
    }
    
+   /**
+    * keep track of hp
+    */
    public void takeDamage(int damage)
    {
        System.out.println(damage + " damage");

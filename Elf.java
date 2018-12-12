@@ -1,15 +1,15 @@
 
 /**
- * Write a description of class Elf here.
+ * This class extends from Creature and is the blueprint of an Elf
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Joseph Truelove
+ * @version 12.11.2018
  */
 public class Elf extends Creature
 {
        // instance variables - replace the example below with your own
     private static final int MAX_ELF_HP = 25;
-    private static final int MIN_ELF_HP = 10;
+    private static final int MIN_ELF_HP = 8;
     private static final int MAX_ELF_STR = 18;
     private static final int MIN_ELF_STR = 5;
 
@@ -29,6 +29,9 @@ public class Elf extends Creature
         );
     }
     
+    /**
+     * special damage type
+     */
     public int damage()
     {
         int dam;
@@ -43,6 +46,9 @@ public class Elf extends Creature
         return dam;
     }
     
+    /**
+     * name of Creature
+     */
     public String toString()
     {
        return "Elf";

@@ -8,7 +8,6 @@
  */
 public class Demon extends Creature
 {
-       // instance variables - replace the example below with your own
     private static final int MAX_DEMON_HP = 30;
     private static final int MIN_DEMON_HP = 15;
     private static final int MAX_DEMON_STR = 15;
@@ -35,6 +34,9 @@ public class Demon extends Creature
         super(hp, strength);
     }
     
+    /**
+     * basic damage for demons
+     */
     public int damage()
     {
         int dam;
@@ -49,6 +51,9 @@ public class Demon extends Creature
         return dam;
     }
     
+    /**
+     * Name of creature
+     */
     public String toString()
     {
        return "Demon";

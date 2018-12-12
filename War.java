@@ -11,8 +11,8 @@ public class War
     // instance variables - replace the example below with your own
     private int i;
     private int tick;
-    private int sizeL = Randomizer.nextInt(75)+25;
-    private int sizeD = Randomizer.nextInt(75)+25;
+    private int sizeL = Randomizer.nextInt(125)+75;     //size of army of light
+    private int sizeD = Randomizer.nextInt(50)+5;      //size of army of dark, in attempt to make it more balanced, lowered max size
     Creature[] armyLight = new Creature[sizeL];
     Creature[] armyDark = new Creature[sizeD];
     private int light = 0;
@@ -28,26 +28,14 @@ public class War
     {
         for (i = 0; i < sizeL; i++)
         {
-            tick = Randomizer.nextInt(24)+1;
-            if (tick >= 1 && tick <= 5)
+            tick = Randomizer.nextInt(10)+1;
+            if (tick >= 1 && tick <= 6)
             {
                 armyLight[i] = new Human();
             }
-            else if (tick >= 6 && tick <= 10)
+            else if (tick >= 7 && tick <= 10)
             {
                 armyLight[i] = new Elf();
-            }
-            else if (tick >= 11 && tick <= 15)
-            {
-                armyLight[i] = new Demon();
-            }
-            else if (tick >= 16 && tick <= 20)
-            {
-                armyLight[i] = new CyberDemon();
-            }
-            else if (tick >= 21 && tick <= 25)
-            {
-                armyLight[i] = new Balrog();
             }
             else
             {
@@ -57,24 +45,16 @@ public class War
         
         for (i = 0; i < sizeD; i++)
         {
-            tick = Randomizer.nextInt(24)+1;
+            tick = Randomizer.nextInt(10)+1;
             if (tick >= 1 && tick <= 5)
-            {
-                armyDark[i] = new Human();
-            }
-            else if (tick >= 6 && tick <= 10)
-            {
-                armyDark[i] = new Elf();
-            }
-            else if (tick >= 11 && tick <= 15)
             {
                 armyDark[i] = new Demon();
             }
-            else if (tick >= 16 && tick <= 20)
+            else if (tick >= 6 && tick <= 8)
             {
                 armyDark[i] = new CyberDemon();
             }
-            else if (tick >= 21 && tick <= 25)
+            else if (tick >= 9 && tick <= 10)
             {
                 armyDark[i] = new Balrog();
             }
@@ -97,33 +77,41 @@ public class War
             
             while (soldierLight.isAlive() && soldierDark.isAlive())
             {
-                //soldierLight is second to attack
-                soldierLight.takeDamage(soldierDark.damage());
-                
-                if (soldierLight.isDead()) //check if light is dead
-                {
-                    light++;
-                    break;
-                }
-                
+                System.out.println(soldierLight.toString() + " deals");
                 soldierDark.takeDamage(soldierLight.damage());
                 
                 if (soldierDark.isDead()) // check if dark is dead
                 {
-                    dark++;
+                    System.out.println(soldierDark.toString() + " has perished");
+                    dark = dark + 1;
+                    
                     break;
                 }
+                
+                //soldierDark is second to attack
+                System.out.println(soldierDark.toString() + " deals");
+                soldierLight.takeDamage(soldierDark.damage());
+                
+                if (soldierLight.isDead()) //check if light is dead
+                {
+                    System.out.println(soldierLight.toString() + " has perished");
+                    light = light + 1;
+                    
+                    break;
+                }
+                
+                
             }
         }
         
         //Display of victor
         if (light == sizeL & dark != sizeD)
         {
-            System.out.println("Army of Light has won!");
-        }
-        else if (dark == sizeL && light != sizeD)
-        {
             System.out.println("Army of Dark has won!");
+        }
+        else if (dark == sizeD && light != sizeL)
+        {
+            System.out.println("Army of Light has won!");
         }
         else if (light == sizeL && dark == sizeD)
         {

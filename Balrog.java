@@ -30,12 +30,18 @@ public class Balrog extends Demon
         );
     }
     
+    /**
+     * personal damage
+     */
     public int damage()
     {
         int dam = super.damage() * 2;
         return dam;
     }
     
+    /**
+     * name of Creature
+     */
     public String toString()
     {
        return "Balrog";

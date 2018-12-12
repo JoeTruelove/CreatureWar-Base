@@ -6,4 +6,5 @@ comment1.target=CyberDemon()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ CyberDemon\r\n
 comment2.params=
 comment2.target=java.lang.String\ toString()
+comment2.text=\r\n\ name\ of\ creature\r\n
 numComments=3
